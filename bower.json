@@ -4,7 +4,7 @@
   "main": "./src/ng-f5-daterangepicker.js",
   "dependencies": {
     "angular": ">= 1.0.7",
-    "foundation-daterangepicker": "*"
+    "foundation-daterangepicker": "*",
     "foundation": "~5.0.0"
   },
   "devDependencies": {
