@@ -1,15 +1,17 @@
 /**
- * @license ng-bs-daterangepicker v0.0.1
- * (c) 2013 Luis Farzati http://github.com/luisfarzati/ng-bs-daterangepicker
+ * @license ng-f5-daterangepicker v0.0.1
+ * (c) 2014 Michael Righi https://github.com/righi/ng-f5-daterangepicker
+ * Forked from Luis Farzati's ng-bs-daterangepicker http://github.com/luisfarzati/ng-bs-daterangepicker
  * License: MIT
  */
 (function (angular) {
 'use strict';
 
-angular.module('ngBootstrap', []).directive('input', function ($compile, $parse) {
+angular.module('ngFoundation', []).directive('input', function ($compile, $parse) {
 	return {
 		restrict: 'E',
 		require: '?ngModel',
+		priority: 1,
 		link: function ($scope, $element, $attributes, ngModel) {
 			if ($attributes.type !== 'daterange' || ngModel === null ) return;
 
@@ -50,11 +52,8 @@ angular.module('ngBootstrap', []).directive('input', function ($compile, $parse)
 					ngModel.$setViewValue({ startDate: moment().startOf('day'), endDate: moment().startOf('day') });
 					return;
 				}
-				$element.data('daterangepicker').startDate = modelValue.startDate;
-				$element.data('daterangepicker').endDate = modelValue.endDate;
-				$element.data('daterangepicker').updateView();
-				$element.data('daterangepicker').updateCalendars();
-				$element.data('daterangepicker').updateInputText();
+				$element.data('daterangepicker').setStartDate(modelValue.startDate);
+				$element.data('daterangepicker').setEndDate(modelValue.endDate);
 			});
 
 			$element.daterangepicker(options, function(start, end) {

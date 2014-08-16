@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
-      files: ['src/ng-bs-daterangepicker.js', 'test/**/*.js']
+      files: ['src/ng-f5-daterangepicker.js', 'test/**/*.js']
     },
 
     karma: {
@@ -21,10 +21,9 @@ module.exports = function(grunt) {
             'src/components/jquery/jquery.js',
             'src/components/angular/angular.js',
             'src/components/angular-mocks/angular-mocks.js',
-            'src/components/bootstrap/dist/js/bootstrap.js',
             'src/components/momentjs/min/moment.min.js',
-            'src/components/bootstrap-daterangepicker/daterangepicker.js',
-            'src/ng-bs-daterangepicker.js',
+            'src/components/foundation-daterangepicker/daterangepicker.js',
+            'src/ng-f5-daterangepicker.js',
             'test/**/*.js']
         }
       }
@@ -33,13 +32,13 @@ module.exports = function(grunt) {
     uglify: {
        options: {
           preserveComments: 'some',
-          sourceMap: 'dist/ng-bs-daterangepicker.min.js.map',
-          sourceMappingURL: 'ng-bs-daterangepicker.min.js.map',
+          sourceMap: 'dist/ng-f5-daterangepicker.min.js.map',
+          sourceMappingURL: 'ng-f5-daterangepicker.min.js.map',
           report: 'min'
        },
        dist: {
           files: {
-             'dist/ng-bs-daterangepicker.min.js': ['src/ng-bs-daterangepicker.js']
+             'dist/ng-f5-daterangepicker.min.js': ['src/ng-f5-daterangepicker.js']
           }
        }
      }

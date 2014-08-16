@@ -1,25 +1,7 @@
-ng-bs-daterangepicker
+ng-f5-daterangepicker
 =====================
 
-Angular directive for Dan Grossman's [bootstrap-daterangepicker](https://github.com/dangrossman/bootstrap-daterangepicker).
-
-Demo: http://luisfarzati.github.io/ng-bs-daterangepicker
-
-Installation
-------------
-
-Using bower:
-
-```
-bower install ng-bs-daterangepicker
-```
-
-Using npm:
-
-```
-npm install ng-bs-daterangepicker
-```
-
+Angular directive for the [foundation daterangepicker](https://github.com/mindblaze/foundation-daterangepicker).
 
 How to use it
 -------------
@@ -27,25 +9,25 @@ How to use it
 You should already have a bunch of scripts and CSS required for bootstrap-daterangepicker:
 
 ```
-<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="daterangepicker-bs3.css">
+<link rel="stylesheet" type="text/css" href="foundation.css">
+<link rel="stylesheet" type="text/css" href="datepicker-f5.css">
 <script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="foundation.min.js"></script>
 <script type="text/javascript" src="moment.min.js"></script>
-<script type="text/javascript" src="daterangepicker.js"></script>
+<script type="text/javascript" src="foundation-daterange-picker.js"></script>
 <script type="text/javascript" src="angular.min.js"></script>
 ```
 
 to the list above, you should add:
 
 ```
-<script type="text/javascript" src="ng-bs-daterangepicker.js"></script>
+<script type="text/javascript" src="ng-f5-daterangepicker.js"></script>
 ```
 
-Then, inject `ngBootstrap` in your application module:
+Then, inject `ngAngular` in your application module:
 
 ```
-angular.module('myApp', ['ngBootstrap']);
+angular.module('myApp', ['ngAngular']);
 ```
 
 and then just add an `input` of type `daterange`:
@@ -105,8 +87,4 @@ npm install -g grunt-cli
 
 
 
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/luisfarzati/ng-bs-daterangepicker/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
