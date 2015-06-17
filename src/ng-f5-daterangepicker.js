@@ -7,7 +7,7 @@
 (function (angular) {
   'use strict';
 
-  angular.module('ngFoundation', []).directive('input', ['$compile','$parse', function (input, $compile, $parse) {
+  angular.module('ngDateRangePicker', []).directive('input', ['$compile','$parse', function ($compile, $parse) {
     return {
       restrict: 'E',
       require: '?ngModel',
@@ -52,8 +52,8 @@
             ngModel.$setViewValue({ startDate: moment().startOf('day'), endDate: moment().startOf('day') });
             return;
           }
-          $element.data('daterangepicker').setStartDate(modelValue.startDate);
-          $element.data('daterangepicker').setEndDate(modelValue.endDate);
+          $element.data('daterangepicker').startDate = modelValue.startDate;
+          $element.data('daterangepicker').endDate = modelValue.endDate;
         });
 
         $element.daterangepicker(options, function(start, end) {
